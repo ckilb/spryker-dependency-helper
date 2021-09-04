@@ -1,0 +1,21 @@
+{
+    "name": "ckilb/spryker-dependency-helper",
+    "description": "Save time declaring your dependencies in Spryker by using convention over configuration.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Christian Kilb",
+            "email": "christian.kilb@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Ckilb\\": "src/Ckilb/"
+        }
+    },
+    "require": {
+        "php": "*",
+        "spryker/kernel": "*"
+    }
+}
