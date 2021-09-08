@@ -1,0 +1,24 @@
+namespace: CkilbTest\Service\DependencyHelper
+
+paths:
+    tests: .
+    data: ../../../_data
+    support: _support
+    log: ../../../_output
+
+coverage:
+    enabled: true
+    remote: false
+    whitelist: { include: ['../../../../src/*'] }
+
+suites:
+    Builder:
+        path: Builder
+        class_name: DependencyHelperBuilderTester
+    Parser:
+        path: Parser
+        class_name: DependencyHelperParserTester
+    Provider:
+        path: Provider
+        class_name: DependencyHelperProviderTester
+

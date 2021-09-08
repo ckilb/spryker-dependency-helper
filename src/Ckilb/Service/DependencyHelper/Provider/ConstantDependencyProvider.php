@@ -66,10 +66,13 @@ class ConstantDependencyProvider implements ConstantDependencyProviderInterface
     ): void {
         $value = $constant->getValue();
 
-        $container[$value] = function (Container $container) use ($constant, $proxyMethod) {
-            $method = $this->locatorMethodBuilder->buildLocatorMethod($constant);
+        $container->set(
+            $value,
+            function (Container $container) use ($constant, $proxyMethod) {
+                $method = $this->locatorMethodBuilder->buildLocatorMethod($constant);
 
-            return $container->getLocator()->$method()->$proxyMethod();
-        };
+                return $container->getLocator()->$method()->$proxyMethod();
+            }
+        );
     }
 }

@@ -1,0 +1,13 @@
+namespace: CkilbTest
+include:
+    - tests/CkilbTest/Service/DependencyHelper
+paths:
+    tests: tests
+    output: tests/_output
+    data: tests/_data
+    support: .
+    envs: tests/_envs
+actor_suffix: Tester
+extensions:
+    enabled:
+        - Codeception\Extension\RunFailed
